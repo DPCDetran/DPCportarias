@@ -1480,6 +1480,65 @@ body.dark-mode .badge-ok{background:#14351f;color:#bbf7d0}body.dark-mode .badge-
 }
 </style>
 
+
+<style id="ajuste-logo-posicao-final-20260826">
+/* Logo na mesma posição visual aprovada no painel comparativo */
+.header > div:first-child {
+    position: relative !important;
+    overflow: visible !important;
+}
+.logo {
+    position: relative !important;
+    top: 9px !important;
+    margin-top: 0 !important;
+    transform: none !important;
+}
+@media (max-width:1200px) and (min-width:701px) {
+    .logo {
+        top: 8px !important;
+        margin-top: 0 !important;
+    }
+}
+@media (max-width:700px) {
+    .logo {
+        top: 0 !important;
+    }
+}
+</style>
+
+<style id="logo-posicao-final-extra">
+/* Ajuste solicitado: logo mais baixo */
+.logo { position: relative !important; top: 8px !important; }
+@media (max-width:1200px) and (min-width:701px) {
+  .logo { top: 8px !important; }
+}
+</style>
+
+<style id="logo-posicao-corrigida-v2">
+@media (min-width:701px){
+  .topbar .header > div:first-child{
+    position:relative !important;
+    overflow:visible !important;
+    align-items:center !important;
+  }
+  .topbar .logo{
+    position:relative !important;
+    top:14px !important;
+    bottom:auto !important;
+    margin:0 !important;
+    transform:none !important;
+  }
+}
+</style>
+
+<style id="logo-ajuste-final-mais-baixo">
+/* Ajuste fino: logo 3px mais baixo */
+.header > div:first-child { position: relative !important; }
+.header .logo { position: relative !important; top: 17px !important; }
+@media (max-width:1200px) and (min-width:701px) {
+  .header .logo { top: 17px !important; }
+}
+</style>
 </head>
 
 <body data-painel-build="20260720115431" data-painel-build="20260819092553">
@@ -84421,7 +84480,8 @@ window.addEventListener('load', function() {
     transform:none !important;
     align-self:flex-end;
     position:relative;
-    bottom:-1px;
+    bottom:-15px;
+    transform:translateY(6px) !important;
   }
   .theme-toggle{
     top:16px !important;
